@@ -12,19 +12,19 @@
   --font:"Bahnschrift","Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 
-header{position:sticky;top:0;z-index:10;background:var(--navy);color:var(--white)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
-.brand{font-weight:700;font-size:20px;text-decoration:none;letter-spacing:.02em}
-.brand span{color:var(--yellow)}
-nav{display:flex;gap:22px;font-size:15px}
-nav a{text-decoration:none;opacity:.85;padding:6px 0;border-bottom:2px solid transparent}
-nav a:hover{opacity:1;border-color:var(--yellow)}
+header{position:sticky;top:0;z-index:10;background:var(--white);color:var(--navy);border-bottom:3px solid var(--yellow)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.brand{display:flex;align-items:center}
+.brand img{height:62px;width:auto;display:block}
+nav{display:flex;gap:22px;font-size:15px;font-weight:600}
+nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--yellow)}
 
 .hero{background:var(--navy);color:var(--white);position:relative;overflow:hidden;padding:84px 0 150px}
 .hero h1{font-size:clamp(34px,6vw,60px);line-height:1.08;margin:0 0 20px;max-width:15em;font-weight:700}
@@ -55,6 +55,12 @@ h2{font-size:clamp(26px,4vw,36px);margin:0 0 28px;line-height:1.15}
 .works{margin-top:36px;padding-top:24px;border-top:1px solid #D5D9DF;display:flex;flex-wrap:wrap;gap:10px 28px}
 .works span:before{content:"✓ ";color:var(--navy);font-weight:700}
 
+.fleet{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.fleet figure{margin:0;grid-column:span 2}
+.fleet figure:first-child{grid-column:span 4}
+.fleet img{display:block;width:100%;height:250px;object-fit:cover;background:var(--steel);border-bottom:4px solid var(--yellow)}
+.fleet figcaption{font-size:15px;color:var(--muted);padding-top:8px}
+
 .prod{list-style:none;margin:0 0 32px;padding:0;columns:2;column-gap:48px}
 .prod li{break-inside:avoid;display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid #D5D9DF}
 .prod a{font-size:15px;color:var(--navy);font-weight:600;white-space:nowrap}
@@ -84,6 +90,9 @@ footer a{color:var(--white)}
   .hero{padding:56px 0 120px}
   .about,.contacts{grid-template-columns:1fr;gap:32px}
   .prod{columns:1}
+  .fleet{grid-template-columns:1fr}
+  .fleet figure,.fleet figure:first-child{grid-column:auto}
+  .fleet img{height:220px}
   .btn.ghost{margin:12px 0 0}
   section{padding:56px 0}
 }
@@ -97,10 +106,11 @@ footer a{color:var(--white)}
 
 <header>
   <div class="wrap">
-    <a class="brand" href="#top">ООО МПП <span>«СЭМ»</span></a>
+    <a class="brand" href="#top"><img src="images/logo.jpg" alt="СЭМ — СпецЭнергоМонтаж" width="84" height="62"></a>
     <nav aria-label="Разделы сайта">
       <a href="#about">О компании</a>
       <a href="#services">Услуги</a>
+      <a href="#fleet">Техника</a>
       <a href="#products">Продукция</a>
       <a href="#contacts">Контакты</a>
     </nav>
@@ -165,7 +175,21 @@ footer a{color:var(--white)}
   </div>
 </section>
 
-<section id="products">
+<section id="fleet">
+  <div class="wrap">
+    <h2>Техника</h2>
+    <p class="lead">Своя спецтехника для земляных и монтажных работ на линейных объектах.</p>
+    <div class="fleet">
+      <figure><img src="images/tech-1.jpg" alt="Экскаватор-погрузчик JCB" width="1200" height="800" loading="lazy"><figcaption>Экскаватор-погрузчик JCB</figcaption></figure>
+      <figure><img src="images/tech-2.jpg" alt="Экскаватор-погрузчик New Holland LB110.B" width="867" height="565" loading="lazy"><figcaption>Экскаватор-погрузчик New Holland LB110.B</figcaption></figure>
+      <figure><img src="images/tech-3.jpg" alt="Бурильно-крановая машина БКМ-317 на шасси ГАЗ" width="1000" height="750" loading="lazy"><figcaption>Бурильно-крановая машина БКМ-317 на шасси ГАЗ</figcaption></figure>
+      <figure><img src="images/tech-4.jpg" alt="Бурильно-крановая машина на шасси КАМАЗ" width="1200" height="800" loading="lazy"><figcaption>Бурильно-крановая машина на шасси КАМАЗ</figcaption></figure>
+      <figure><img src="images/tech-5.jpg" alt="Автокран КС-5576К Ивановец на шасси КАМАЗ" width="1200" height="678" loading="lazy"><figcaption>Автокран КС-5576К «Ивановец» на шасси КАМАЗ</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="alt">
   <div class="wrap">
     <h2>Продукция</h2>
     <p class="lead">Поставляем материалы для линейного строительства. Цены и наличие сообщаем по запросу.</p>
@@ -182,7 +206,7 @@ footer a{color:var(--white)}
   </div>
 </section>
 
-<section id="contacts" class="alt">
+<section id="contacts">
   <div class="wrap">
     <h2>Контакты</h2>
     <div class="contacts">
@@ -213,7 +237,7 @@ footer a{color:var(--white)}
   </div>
 </section>
 
-<section id="privacy">
+<section id="privacy" class="alt">
   <div class="wrap policy">
     <h2>Политика конфиденциальности</h2>
     <p>Редакция от 18 ноября 2026 года.</p>
