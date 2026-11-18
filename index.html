@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ООО МПП «СЭМ» — строительство линий электропередачи, водопроводов и газопроводов</title>
+<meta name="description" content="СпецЭнергоМонтаж, г. Нефтекамск: строительство ВЛ и КЛ 0,4–10 кВ, водопроводов, газопроводов. Продажа опор СВ, провода СИП, кабеля, металлоконструкций.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%2314233A'/%3E%3Cpath d='M50 15v70M25 32h50M32 48h36' stroke='%23F2B705' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --navy:#14233A; --ink:#101A2B; --yellow:#F2B705; --steel:#E8EAED; --mist:#F6F7F8; --muted:#5A6678; --white:#fff;
+  --font:"Bahnschrift","Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+header{position:sticky;top:0;z-index:10;background:var(--navy);color:var(--white)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font-weight:700;font-size:20px;text-decoration:none;letter-spacing:.02em}
+.brand span{color:var(--yellow)}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;opacity:.85;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{opacity:1;border-color:var(--yellow)}
+
+.hero{background:var(--navy);color:var(--white);position:relative;overflow:hidden;padding:84px 0 150px}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.08;margin:0 0 20px;max-width:15em;font-weight:700}
+.hero p{max-width:34em;font-size:19px;color:#C9D2E0;margin:0 0 30px}
+.btn{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:700;padding:13px 26px;border-radius:3px;text-decoration:none}
+.btn:hover{background:#ffcb2e}
+.btn.ghost{background:transparent;color:var(--white);border:2px solid #52627C;margin-left:10px}
+.btn.ghost:hover{border-color:var(--yellow)}
+.line{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px;pointer-events:none}
+
+section{padding:76px 0}
+section.alt{background:var(--mist)}
+h2{font-size:clamp(26px,4vw,36px);margin:0 0 28px;line-height:1.15}
+.lead{max-width:40em;color:var(--muted);margin:-12px 0 32px}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.facts{display:grid;gap:18px}
+.fact{border-left:4px solid var(--yellow);padding-left:16px}
+.fact b{display:block;font-size:30px;line-height:1.1;color:var(--navy)}
+.fact span{color:var(--muted);font-size:15px}
+
+.services{border-left:3px solid var(--navy);margin-left:6px}
+.svc{position:relative;padding:0 0 30px 34px}
+.svc:last-child{padding-bottom:0}
+.svc:before{content:"";position:absolute;left:-10px;top:8px;width:17px;height:17px;background:var(--yellow);border:3px solid var(--navy);border-radius:50%}
+.svc h3{margin:0 0 4px;font-size:21px}
+.svc p{margin:0;color:var(--muted);max-width:40em}
+.works{margin-top:36px;padding-top:24px;border-top:1px solid #D5D9DF;display:flex;flex-wrap:wrap;gap:10px 28px}
+.works span:before{content:"✓ ";color:var(--navy);font-weight:700}
+
+.prod{list-style:none;margin:0 0 32px;padding:0;columns:2;column-gap:48px}
+.prod li{break-inside:avoid;display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid #D5D9DF}
+.prod a{font-size:15px;color:var(--navy);font-weight:600;white-space:nowrap}
+.note{color:var(--muted);font-size:15px;margin:0 0 20px}
+
+.contacts{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+dl{margin:0}
+dt{color:var(--muted);font-size:14px;margin-top:18px}
+dt:first-child{margin-top:0}
+dd{margin:2px 0 0;font-size:19px}
+dd a{text-decoration-color:var(--yellow);text-underline-offset:4px;text-decoration-thickness:2px}
+.req{background:var(--navy);color:var(--white);padding:28px;border-radius:4px}
+.req h3{margin:0 0 14px;font-size:20px}
+.req dd{font-size:18px}
+.req dt{color:#9FB0C8}
+
+footer{background:var(--ink);color:#9FB0C8;padding:28px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer a{color:var(--white)}
+
+.policy{font-size:15px;color:#2B3647}
+.policy h3{font-size:17px;margin:22px 0 6px;color:var(--ink)}
+.policy p,.policy li{max-width:46em;margin:6px 0}
+
+@media (max-width:760px){
+  nav{display:none}
+  .hero{padding:56px 0 120px}
+  .about,.contacts{grid-template-columns:1fr;gap:32px}
+  .prod{columns:1}
+  .btn.ghost{margin:12px 0 0}
+  section{padding:56px 0}
+}
+@media (prefers-reduced-motion:no-preference){
+  .wire{stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 2.4s ease-out .2s forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">ООО МПП <span>«СЭМ»</span></a>
+    <nav aria-label="Разделы сайта">
+      <a href="#about">О компании</a>
+      <a href="#services">Услуги</a>
+      <a href="#products">Продукция</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <h1>Строим линии электропередачи, водопроводы и газопроводы</h1>
+    <p>Монтажное производственное предприятие «СпецЭнергоМонтаж». Работаем в Республике Башкортостан, а также поставляем материалы для линейного строительства.</p>
+    <a class="btn" href="#contacts">Связаться с нами</a>
+    <a class="btn ghost" href="#services">Чем занимаемся</a>
+  </div>
+  <svg class="line" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
+    <g stroke="#F2B705" fill="none" stroke-width="2.5" stroke-linecap="round">
+      <path class="wire" d="M0 70 Q150 118 300 70 T600 70 T900 70 T1200 70"/>
+      <path class="wire" d="M0 92 Q150 140 300 92 T600 92 T900 92 T1200 92"/>
+    </g>
+    <g stroke="#52627C" stroke-width="5" stroke-linecap="round">
+      <path d="M300 56V150M280 62h40"/><path d="M600 56V150M580 62h40"/><path d="M900 56V150M880 62h40"/>
+    </g>
+  </svg>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>О компании</h2>
+      <p>ООО МПП «СпецЭнергоМонтаж» основано в 2012 году в г. Нефтекамске. Мы строим и реконструируем линейные объекты: воздушные и кабельные линии электропередачи, сети водоснабжения и газоснабжения.</p>
+      <p>Отдельное направление — продажа материалов для электросетевого строительства: железобетонные опоры, провод СИП, линейная арматура, кабельная продукция и металлоконструкции.</p>
+      <p>Состоим в саморегулируемых организациях: <b>БашстройТЭК</b> (строительство) и <b>АСРО БОАП</b> (проектирование).</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b id="years">14 лет</b><span>на рынке, с 2012 года</span></div>
+      <div class="fact"><b>Республика Башкортостан</b><span>регион работы</span></div>
+      <div class="fact"><b>2 членства в СРО</b><span>строительное и проектное</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <h2>Услуги</h2>
+    <div class="services">
+      <div class="svc">
+        <h3>Воздушные и кабельные линии 0,4–10 кВ</h3>
+        <p>Строительство ВЛ и КЛ: от опор и монтажа провода до подключения. Используем железобетонные опоры СВ и самонесущий изолированный провод СИП.</p>
+      </div>
+      <div class="svc">
+        <h3>Водопроводы</h3>
+        <p>Прокладка и обновление сетей водоснабжения.</p>
+      </div>
+      <div class="svc">
+        <h3>Газопроводы</h3>
+        <p>Строительство и реконструкция газопроводов.</p>
+      </div>
+    </div>
+    <div class="works" aria-label="Виды работ">
+      <span>Новое строительство</span><span>Реконструкция</span><span>Капитальный ремонт</span>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <h2>Продукция</h2>
+    <p class="lead">Поставляем материалы для линейного строительства. Цены и наличие сообщаем по запросу.</p>
+    <ul class="prod">
+      <li><span>Опоры железобетонные СВ 110</span><a href="#" data-req="Опоры СВ 110">Запросить</a></li>
+      <li><span>Опоры железобетонные СВ 95</span><a href="#" data-req="Опоры СВ 95">Запросить</a></li>
+      <li><span>Провода СИП</span><a href="#" data-req="Провода СИП">Запросить</a></li>
+      <li><span>Арматура для СИП</span><a href="#" data-req="Арматура для СИП">Запросить</a></li>
+      <li><span>Кабельная продукция</span><a href="#" data-req="Кабельная продукция">Запросить</a></li>
+      <li><span>Металлоконструкции</span><a href="#" data-req="Металлоконструкции">Запросить</a></li>
+    </ul>
+    <p class="note">Кнопка «Запросить» открывает письмо с названием позиции. Укажите количество и адрес поставки.</p>
+    <a class="btn" href="#" data-req="Общий запрос по продукции">Запросить прайс</a>
+  </div>
+</section>
+
+<section id="contacts" class="alt">
+  <div class="wrap">
+    <h2>Контакты</h2>
+    <div class="contacts">
+      <dl>
+        <dt>Телефон</dt>
+        <dd><a href="tel:+73478361822">8 (34783) 6-18-22</a></dd>
+        <dt>Электронная почта</dt>
+        <dd><a href="mailto:mppsem@yandex.ru">mppsem@yandex.ru</a></dd>
+        <dt>Адрес</dt>
+        <dd>452680, Республика Башкортостан,<br>г. Нефтекамск, ул. Индустриальная, 11Б<br><a href="https://yandex.ru/maps/?text=%D0%9D%D0%B5%D1%84%D1%82%D0%B5%D0%BA%D0%B0%D0%BC%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%2C%2011%D0%91" target="_blank" rel="noopener">Показать на карте</a></dd>
+        <dt>Режим работы</dt>
+        <dd>Пн–Пт, 08:00–17:00<br>Сб, Вс и праздничные дни — выходные</dd>
+      </dl>
+      <div class="req">
+        <h3>Реквизиты</h3>
+        <dl>
+          <dt>Полное наименование</dt>
+          <dd>ООО Монтажное производственное предприятие «СпецЭнергоМонтаж»</dd>
+          <dt>ИНН / КПП</dt>
+          <dd>0264064952 / 026401001</dd>
+          <dt>ОГРН</dt>
+          <dd>1120264002100</dd>
+          <dt>Директор</dt>
+          <dd>Ремигайло Андрей Александрович</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap policy">
+    <h2>Политика конфиденциальности</h2>
+    <p>Редакция от 18 ноября 2026 года.</p>
+
+    <h3>1. Кто мы</h3>
+    <p>Оператор сайта — ООО МПП «СпецЭнергоМонтаж» (ИНН 0264064952, ОГРН 1120264002100), 452680, Республика Башкортостан, г. Нефтекамск, ул. Индустриальная, 11Б. Почта для обращений: mppsem@yandex.ru.</p>
+
+    <h3>2. Какие данные мы получаем</h3>
+    <p>Сайт информационный. На нём нет форм, регистрации, личных кабинетов, файлов cookie, счётчиков посещаемости и сторонних скриптов. Мы получаем данные только тогда, когда вы сами пишете нам на почту или звоните: имя, телефон, адрес электронной почты, название организации и содержание обращения.</p>
+
+    <h3>3. Для чего мы их используем</h3>
+    <p>Только чтобы ответить на ваш запрос, подготовить коммерческое предложение и заключить договор, если вы решите с нами работать.</p>
+
+    <h3>4. Хранение и передача</h3>
+    <p>Мы храним обращения не дольше, чем это нужно для этих целей и требуется по закону. Мы не продаём данные и не передаём их третьим лицам, кроме случаев, когда этого требует законодательство РФ. Электронная почта работает через сервис «Яндекс Почта», поэтому переписка хранится и на его серверах.</p>
+
+    <h3>5. Ваши права</h3>
+    <p>Вы можете запросить сведения о том, какие ваши данные мы храним, потребовать их уточнить или удалить, а также отозвать согласие на обработку. Для этого напишите на mppsem@yandex.ru. Мы ответим в сроки, установленные Федеральным законом № 152-ФЗ «О персональных данных».</p>
+
+    <h3>6. Изменения</h3>
+    <p>Мы можем обновлять эту политику. Актуальная версия всегда размещена на этой странице.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> ООО МПП «СЭМ». Все права защищены.</span>
+    <a href="#privacy">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var now = new Date(), n = now.getFullYear() - 2012;
+  var m10 = n % 10, m100 = n % 100;
+  var word = (m10 === 1 && m100 !== 11) ? "год" : (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) ? "года" : "лет";
+  document.getElementById("years").textContent = n + " " + word;
+  document.getElementById("year").textContent = now.getFullYear();
+
+  var links = document.querySelectorAll("[data-req]");
+  for (var i = 0; i < links.length; i++) {
+    var a = links[i], subject = "Запрос: " + a.getAttribute("data-req");
+    a.href = "mailto:mppsem@yandex.ru?subject=" + encodeURIComponent(subject);
+  }
+})();
+</script>
+</body>
+</html>
