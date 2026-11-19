@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ООО МПП «СЭМ» — строительство линий электропередачи, водопроводов и газопроводов</title>
-<meta name="description" content="СпецЭнергоМонтаж, г. Нефтекамск: строительство ВЛ и КЛ 0,4–10 кВ, водопроводов, газопроводов. Продажа опор СВ, провода СИП, кабеля, металлоконструкций.">
+<meta name="description" content="СпецЭнергоМонтаж, г. Нефтекамск: строительство ВЛ и КЛ 0,4–10 кВ, водопроводов, газопроводов. Продажа опор СВ, провода СИП, кабеля, металлоконструкций. Аренда спецтехники.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -60,11 +60,14 @@ h2{font-size:clamp(26px,4vw,36px);margin:0 0 28px;line-height:1.15}
 .works{margin-top:36px;padding-top:24px;border-top:1px solid #D5D9DF;display:flex;flex-wrap:wrap;gap:10px 28px}
 .works span:before{content:"✓ ";color:var(--navy);font-weight:700}
 
-.fleet{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
-.fleet figure{margin:0;grid-column:span 2}
-.fleet figure:first-child{grid-column:span 4}
-.fleet img{display:block;width:100%;height:250px;object-fit:cover;background:var(--steel);border-bottom:4px solid var(--yellow)}
+.fleet{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.fleet figure{margin:0}
+.fleet figure:first-child{grid-column:1/-1}
+.fleet img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--steel);border-bottom:4px solid var(--yellow)}
+.fleet figure:first-child img{aspect-ratio:21/9;object-position:70% 50%}
 .fleet figcaption{font-size:15px;color:var(--muted);padding-top:8px}
+.fleet figcaption b{color:var(--ink);font-size:17px;display:block}
+.rent{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
 
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:34px}
 .quotes blockquote{margin:0;border-left:4px solid var(--yellow);padding:2px 0 2px 16px}
@@ -75,7 +78,7 @@ details.scans summary{cursor:pointer;font-weight:700;color:var(--navy);font-size
 .scan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-top:18px}
 .scan-grid img{display:block;width:100%;height:auto;border:1px solid #CBD0D8;background:#fff}
 .scan-grid a:hover img{border-color:var(--yellow);outline:2px solid var(--yellow)}
-.press{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.press{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,440px));gap:22px}
 .press figure{margin:0}
 .press img{display:block;width:100%;height:260px;object-fit:cover;object-position:top;border:1px solid #CBD0D8;border-bottom:4px solid var(--yellow);background:#fff}
 .press figcaption{padding-top:10px;font-size:15px;color:var(--muted)}
@@ -116,8 +119,8 @@ footer a{color:var(--white)}
   .about,.contacts{grid-template-columns:1fr;gap:32px}
   .prod{columns:1}
   .fleet,.quotes,.press{grid-template-columns:1fr}
-  .fleet figure,.fleet figure:first-child{grid-column:auto}
-  .fleet img{height:220px}
+  .fleet figure:first-child{grid-column:auto}
+  .fleet figure:first-child img{aspect-ratio:4/3}
   .btn.ghost{margin:12px 0 0}
   section{padding:56px 0}
 }
@@ -198,6 +201,10 @@ footer a{color:var(--white)}
         <h3>Газопроводы</h3>
         <p>Строительство и реконструкция газопроводов.</p>
       </div>
+      <div class="svc">
+        <h3>Аренда спецтехники</h3>
+        <p>Вся наша техника сдаётся в аренду: экскаваторы-погрузчики, бурильно-крановые машины, автокран, кран-манипулятор Fassi, тягач МАЗ с тралом, дробилка ДКР.</p>
+      </div>
     </div>
     <div class="works" aria-label="Виды работ">
       <span>Новое строительство</span><span>Реконструкция</span><span>Капитальный ремонт</span>
@@ -208,13 +215,22 @@ footer a{color:var(--white)}
 <section id="fleet">
   <div class="wrap">
     <h2>Техника</h2>
-    <p class="lead">Своя спецтехника для земляных и монтажных работ на линейных объектах.</p>
+    <p class="lead">Своя спецтехника для земляных и монтажных работ на линейных объектах. Вся техника сдаётся в аренду.</p>
     <div class="fleet">
-      <figure><img src="images/tech-1.jpg" alt="Экскаватор-погрузчик JCB" width="1200" height="800" loading="lazy"><figcaption>Экскаватор-погрузчик JCB</figcaption></figure>
-      <figure><img src="images/tech-2.jpg" alt="Экскаватор-погрузчик New Holland LB110.B" width="867" height="565" loading="lazy"><figcaption>Экскаватор-погрузчик New Holland LB110.B</figcaption></figure>
-      <figure><img src="images/tech-3.jpg" alt="Бурильно-крановая машина БКМ-317 на шасси ГАЗ" width="1000" height="750" loading="lazy"><figcaption>Бурильно-крановая машина БКМ-317 на шасси ГАЗ</figcaption></figure>
-      <figure><img src="images/tech-4.jpg" alt="Бурильно-крановая машина на шасси КАМАЗ" width="1200" height="800" loading="lazy"><figcaption>Бурильно-крановая машина на шасси КАМАЗ</figcaption></figure>
-      <figure><img src="images/tech-5.jpg" alt="Автокран КС-5576К Ивановец на шасси КАМАЗ" width="1200" height="678" loading="lazy"><figcaption>Автокран КС-5576К «Ивановец» на шасси КАМАЗ</figcaption></figure>
+      <figure><img src="images/tech-6.jpg" alt="КАМАЗ с краном-манипулятором Fassi и тралом" width="1600" height="719" loading="lazy"><figcaption><b>КАМАЗ с краном-манипулятором Fassi и тралом</b>Максимальный вылет стрелы 18,65 м</figcaption></figure>
+      <figure><img src="images/tech-7.jpg" alt="Тягач МАЗ с тралом" width="900" height="1200" loading="lazy" style="object-position:50% 58%"><figcaption><b>Тягач МАЗ с тралом</b></figcaption></figure>
+      <figure><img src="images/tech-8.jpg" alt="Трал с железобетонными опорами СВ 110" width="900" height="1200" loading="lazy" style="object-position:50% 62%"><figcaption><b>Трал с железобетонными опорами СВ 110</b></figcaption></figure>
+      <figure><img src="images/tech-9.jpg" alt="УРАЛ с бурильно-крановой машиной БКМ" width="900" height="1200" loading="lazy" style="object-position:50% 60%"><figcaption><b>УРАЛ с бурильно-крановой машиной БКМ</b></figcaption></figure>
+      <figure><img src="images/tech-10.jpg" alt="Дробилка ДКР" width="900" height="1200" loading="lazy" style="object-position:62% 45%"><figcaption><b>Дробилка ДКР</b>Измельчение веток и порубочных остатков</figcaption></figure>
+      <figure><img src="images/tech-1.jpg" alt="Экскаватор-погрузчик JCB" width="1200" height="800" loading="lazy"><figcaption><b>Экскаватор-погрузчик JCB</b></figcaption></figure>
+      <figure><img src="images/tech-2.jpg" alt="Экскаватор-погрузчик New Holland LB110.B" width="867" height="565" loading="lazy"><figcaption><b>Экскаватор-погрузчик New Holland LB110.B</b></figcaption></figure>
+      <figure><img src="images/tech-3.jpg" alt="Бурильно-крановая машина БКМ-317 на шасси ГАЗ" width="1000" height="750" loading="lazy"><figcaption><b>Бурильно-крановая машина БКМ-317 на шасси ГАЗ</b></figcaption></figure>
+      <figure><img src="images/tech-4.jpg" alt="Бурильно-крановая машина на шасси КАМАЗ" width="1200" height="800" loading="lazy"><figcaption><b>Бурильно-крановая машина на шасси КАМАЗ</b></figcaption></figure>
+      <figure><img src="images/tech-5.jpg" alt="Автокран КС-5576К «Ивановец» на шасси КАМАЗ" width="1200" height="678" loading="lazy"><figcaption><b>Автокран КС-5576К «Ивановец» на шасси КАМАЗ</b></figcaption></figure>
+    </div>
+    <div class="rent">
+      <a class="btn" href="mailto:mppsem@yandex.ru?subject=%D0%97%D0%B0%D0%BF%D1%80%D0%BE%D1%81%3A%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8%3A%20%0A%D0%9F%D0%B5%D1%80%D0%B8%D0%BE%D0%B4%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D1%8B%3A%20%0A%D0%9C%D0%B5%D1%81%D1%82%D0%BE%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%3A%20%0A%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%BD%D0%BE%D0%B5%20%D0%BB%D0%B8%D1%86%D0%BE%20%D0%B8%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%3A%20">Узнать об аренде</a>
+      <span class="note" style="margin:0">Условия и стоимость сообщим по запросу: <a href="tel:+73478361822">8 (34783) 6-18-22</a> или <a href="mailto:mppsem@yandex.ru">mppsem@yandex.ru</a></span>
     </div>
   </div>
 </section>
@@ -222,42 +238,33 @@ footer a{color:var(--white)}
 <section id="reviews" class="alt">
   <div class="wrap">
     <h2>Отзывы заказчиков</h2>
-    <p class="lead">Благодарственные письма и отзывы энергетических предприятий Башкортостана, с которыми мы работаем с 2010 года.</p>
+    <p class="lead">Благодарственные письма и отзывы энергетических предприятий Башкортостана.</p>
     <div class="quotes">
-      <blockquote><p><b>«Исключительно ответственный добросовестный компаньон»</b></p><p>Так охарактеризовало компанию руководство ПО «Нефтекамские электрические сети» ООО «Башкирэнерго» после шести лет совместной работы.</p><cite>Письмо от 25 января 2016 г.</cite></blockquote>
+      <blockquote><p><b>«Исключительно ответственный добросовестный компаньон»</b></p><p>Так охарактеризовало компанию руководство ПО «Нефтекамские электрические сети» ООО «Башкирэнерго».</p><cite>Письмо от 25 января 2016 г.</cite></blockquote>
       <blockquote><p><b>Свет вернули через сутки</b></p><p>В 2014 году после разрушительного смерча бригады СЭМ участвовали в восстановлении электроснабжения в Кариево Краснокамского района: потребитель получил электроэнергию уже через сутки.</p><cite>Башкирэнерго, 2016 г.</cite></blockquote>
       <blockquote><p><b>Благодарность за многолетнюю работу</b></p><p>ПО «НЭС» благодарит за ремонт, реконструкцию, техперевооружение и строительство электрических сетей 0,4–110 кВ.</p><cite>ПО «Нефтекамские электрические сети»</cite></blockquote>
-      <blockquote><p><b>Двенадцать объектов за год</b></p><p>Янаульский РЭС отметил, что в 2010 году компания выполнила работы на 12 объектах, и практически нареканий на них нет.</p><cite>Янаульский РЭС, 2010 г.</cite></blockquote>
+      <blockquote><p><b>Подстанции Байкибашево, Янаул и Агидель</b></p><p>Реконструкция и техперевооружение подстанций в 2014 году: кабельные каналы ОРУ-110 кВ, замена выключателей, пуско-наладка релейной защиты. Работы предъявлены с хорошим качеством и в срок.</p><cite>Башкирэнерго, 2015 г.</cite></blockquote>
       <blockquote><p><b>Работы выполнены в срок</b></p><p>При технологическом присоединении потребителей свыше 150 кВт компания использовала современную технику и сертифицированные материалы, документацию сдавала в полном объёме и в срок.</p><cite>ПО «Северо-восточные электрические сети», 2016 г.</cite></blockquote>
-      <blockquote><p><b>Подрядчик с 2011 года</b></p><p>ООО «БУРС» отметило, что СЭМ обслуживает его электрооборудование, соблюдает правила охраны труда и не нарушает технологический процесс.</p><cite>ООО «БУРС», 2013 г.</cite></blockquote>
+      <blockquote><p><b>Реконструкция сетей в стеснённых условиях</b></p><p>В селе Кутерем при множестве подземных и надземных коммуникаций объект выполнен в срок и в строгом соответствии с нормами.</p><cite>Башкирэнерго, 2016 г.</cite></blockquote>
     </div>
     <details class="scans">
-      <summary>Посмотреть письма целиком (24 документа)</summary>
+      <summary>Посмотреть письма целиком (15 документов)</summary>
       <div class="scan-grid">
         <a href="reviews/r01.jpg" target="_blank" rel="noopener"><img src="reviews/t01.jpg" alt="Отзыв заказчика, документ 1" width="300" height="424" loading="lazy"></a>
         <a href="reviews/r02.jpg" target="_blank" rel="noopener"><img src="reviews/t02.jpg" alt="Отзыв заказчика, документ 2" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r03.jpg" target="_blank" rel="noopener"><img src="reviews/t03.jpg" alt="Отзыв заказчика, документ 3" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r04.jpg" target="_blank" rel="noopener"><img src="reviews/t04.jpg" alt="Отзыв заказчика, документ 4" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r05.jpg" target="_blank" rel="noopener"><img src="reviews/t05.jpg" alt="Отзыв заказчика, документ 5" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r06.jpg" target="_blank" rel="noopener"><img src="reviews/t06.jpg" alt="Отзыв заказчика, документ 6" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r07.jpg" target="_blank" rel="noopener"><img src="reviews/t07.jpg" alt="Отзыв заказчика, документ 7" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r08.jpg" target="_blank" rel="noopener"><img src="reviews/t08.jpg" alt="Отзыв заказчика, документ 8" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r09.jpg" target="_blank" rel="noopener"><img src="reviews/t09.jpg" alt="Отзыв заказчика, документ 9" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r10.jpg" target="_blank" rel="noopener"><img src="reviews/t10.jpg" alt="Отзыв заказчика, документ 10" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r11.jpg" target="_blank" rel="noopener"><img src="reviews/t11.jpg" alt="Отзыв заказчика, документ 11" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r12.jpg" target="_blank" rel="noopener"><img src="reviews/t12.jpg" alt="Отзыв заказчика, документ 12" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r13.jpg" target="_blank" rel="noopener"><img src="reviews/t13.jpg" alt="Отзыв заказчика, документ 13" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r14.jpg" target="_blank" rel="noopener"><img src="reviews/t14.jpg" alt="Отзыв заказчика, документ 14" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r15.jpg" target="_blank" rel="noopener"><img src="reviews/t15.jpg" alt="Отзыв заказчика, документ 15" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r16.jpg" target="_blank" rel="noopener"><img src="reviews/t16.jpg" alt="Отзыв заказчика, документ 16" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r17.jpg" target="_blank" rel="noopener"><img src="reviews/t17.jpg" alt="Отзыв заказчика, документ 17" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r18.jpg" target="_blank" rel="noopener"><img src="reviews/t18.jpg" alt="Отзыв заказчика, документ 18" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r19.jpg" target="_blank" rel="noopener"><img src="reviews/t19.jpg" alt="Отзыв заказчика, документ 19" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r20.jpg" target="_blank" rel="noopener"><img src="reviews/t20.jpg" alt="Отзыв заказчика, документ 20" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r21.jpg" target="_blank" rel="noopener"><img src="reviews/t21.jpg" alt="Отзыв заказчика, документ 21" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r22.jpg" target="_blank" rel="noopener"><img src="reviews/t22.jpg" alt="Отзыв заказчика, документ 22" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r23.jpg" target="_blank" rel="noopener"><img src="reviews/t23.jpg" alt="Отзыв заказчика, документ 23" width="300" height="424" loading="lazy"></a>
-        <a href="reviews/r24.jpg" target="_blank" rel="noopener"><img src="reviews/t24.jpg" alt="Отзыв заказчика, документ 24" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r08.jpg" target="_blank" rel="noopener"><img src="reviews/t08.jpg" alt="Отзыв заказчика, документ 3" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r10.jpg" target="_blank" rel="noopener"><img src="reviews/t10.jpg" alt="Отзыв заказчика, документ 4" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r11.jpg" target="_blank" rel="noopener"><img src="reviews/t11.jpg" alt="Отзыв заказчика, документ 5" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r14.jpg" target="_blank" rel="noopener"><img src="reviews/t14.jpg" alt="Отзыв заказчика, документ 6" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r15.jpg" target="_blank" rel="noopener"><img src="reviews/t15.jpg" alt="Отзыв заказчика, документ 7" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r16.jpg" target="_blank" rel="noopener"><img src="reviews/t16.jpg" alt="Отзыв заказчика, документ 8" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r17.jpg" target="_blank" rel="noopener"><img src="reviews/t17.jpg" alt="Отзыв заказчика, документ 9" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r18.jpg" target="_blank" rel="noopener"><img src="reviews/t18.jpg" alt="Отзыв заказчика, документ 10" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r19.jpg" target="_blank" rel="noopener"><img src="reviews/t19.jpg" alt="Отзыв заказчика, документ 11" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r20.jpg" target="_blank" rel="noopener"><img src="reviews/t20.jpg" alt="Отзыв заказчика, документ 12" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r21.jpg" target="_blank" rel="noopener"><img src="reviews/t21.jpg" alt="Отзыв заказчика, документ 13" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r22.jpg" target="_blank" rel="noopener"><img src="reviews/t22.jpg" alt="Отзыв заказчика, документ 14" width="300" height="424" loading="lazy"></a>
+        <a href="reviews/r24.jpg" target="_blank" rel="noopener"><img src="reviews/t24.jpg" alt="Отзыв заказчика, документ 15" width="300" height="424" loading="lazy"></a>
       </div>
     </details>
   </div>
@@ -266,11 +273,9 @@ footer a{color:var(--white)}
 <section id="media">
   <div class="wrap">
     <h2>О нас пишут</h2>
-    <p class="lead">Публикации о компании в прессе. Нажмите на картинку, чтобы открыть полностью.</p>
+    <p class="lead">Публикация о работе нашей бригады. Нажмите на картинку, чтобы открыть полностью.</p>
     <div class="press">
       <figure><a href="media/m1.jpg" target="_blank" rel="noopener"><img src="media/mt1.jpg" alt="Бригада электромонтажников на объекте, газета «Янаульские зори»" loading="lazy"></a><figcaption><b>«Свет над новыми улицами Шудека»</b>Газета «Янаульские зори», 17 апреля 2013 г. Электрификация новых улиц села, бригада электромонтажников СЭМ.</figcaption></figure>
-      <figure><a href="media/m2.jpg" target="_blank" rel="noopener"><img src="media/mt2.jpg" alt="Статья о компании, стр. 110" loading="lazy"></a><figcaption><b>«Надёжный штурман в море бушующего рынка»</b>Публикация о предприятии, его истории и руководителе: водопроводы, газопроводы, электромонтаж.</figcaption></figure>
-      <figure><a href="media/m3.jpg" target="_blank" rel="noopener"><img src="media/mt3.jpg" alt="Статья о компании «Стабильность и ответственность»" loading="lazy"></a><figcaption><b>«Стабильность и ответственность»</b>Публикация о направлениях работы, технике и коллективе компании.</figcaption></figure>
     </div>
   </div>
 </section>
