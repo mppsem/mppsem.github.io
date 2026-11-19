@@ -78,7 +78,7 @@ details.scans summary{cursor:pointer;font-weight:700;color:var(--navy);font-size
 .scan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-top:18px}
 .scan-grid img{display:block;width:100%;height:auto;border:1px solid #CBD0D8;background:#fff}
 .scan-grid a:hover img{border-color:var(--yellow);outline:2px solid var(--yellow)}
-.press{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,440px));gap:22px}
+.press{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .press figure{margin:0}
 .press img{display:block;width:100%;height:260px;object-fit:cover;object-position:top;border:1px solid #CBD0D8;border-bottom:4px solid var(--yellow);background:#fff}
 .press figcaption{padding-top:10px;font-size:15px;color:var(--muted)}
@@ -203,7 +203,7 @@ footer a{color:var(--white)}
       </div>
       <div class="svc">
         <h3>Аренда спецтехники</h3>
-        <p>Вся наша техника сдаётся в аренду: экскаваторы-погрузчики, бурильно-крановые машины, автокран, кран-манипулятор Fassi, тягач МАЗ с тралом, дробилка ДКР.</p>
+        <p>Вся наша техника сдаётся в аренду: гусеничный экскаватор, экскаваторы-погрузчики, бурильно-крановые машины, автокран, кран-манипулятор Fassi, тягач МАЗ с тралом, дробилка ДКР.</p>
       </div>
     </div>
     <div class="works" aria-label="Виды работ">
@@ -219,11 +219,12 @@ footer a{color:var(--white)}
     <div class="fleet">
       <figure><img src="images/tech-6.jpg" alt="КАМАЗ с краном-манипулятором Fassi и тралом" width="1600" height="719" loading="lazy"><figcaption><b>КАМАЗ с краном-манипулятором Fassi и тралом</b>Максимальный вылет стрелы 18,65 м</figcaption></figure>
       <figure><img src="images/tech-7.jpg" alt="Тягач МАЗ с тралом" width="900" height="1200" loading="lazy" style="object-position:50% 58%"><figcaption><b>Тягач МАЗ с тралом</b></figcaption></figure>
-      <figure><img src="images/tech-8.jpg" alt="Трал с железобетонными опорами СВ 110" width="900" height="1200" loading="lazy" style="object-position:50% 62%"><figcaption><b>Трал с железобетонными опорами СВ 110</b></figcaption></figure>
+      <figure><img src="images/tech-8.jpg" alt="Трал" width="900" height="1200" loading="lazy" style="object-position:50% 62%"><figcaption><b>Трал</b></figcaption></figure>
       <figure><img src="images/tech-9.jpg" alt="УРАЛ с бурильно-крановой машиной БКМ" width="900" height="1200" loading="lazy" style="object-position:50% 60%"><figcaption><b>УРАЛ с бурильно-крановой машиной БКМ</b></figcaption></figure>
       <figure><img src="images/tech-10.jpg" alt="Дробилка ДКР" width="900" height="1200" loading="lazy" style="object-position:62% 45%"><figcaption><b>Дробилка ДКР</b>Измельчение веток и порубочных остатков</figcaption></figure>
       <figure><img src="images/tech-1.jpg" alt="Экскаватор-погрузчик JCB" width="1200" height="800" loading="lazy"><figcaption><b>Экскаватор-погрузчик JCB</b></figcaption></figure>
       <figure><img src="images/tech-2.jpg" alt="Экскаватор-погрузчик New Holland LB110.B" width="867" height="565" loading="lazy"><figcaption><b>Экскаватор-погрузчик New Holland LB110.B</b></figcaption></figure>
+      <figure><img src="images/tech-11.jpg" alt="Экскаватор гусеничный Hitachi ZAXIS 200LC" width="1200" height="800" loading="lazy" style="object-position:50% 55%"><figcaption><b>Экскаватор гусеничный Hitachi ZAXIS 200LC</b></figcaption></figure>
       <figure><img src="images/tech-3.jpg" alt="Бурильно-крановая машина БКМ-317 на шасси ГАЗ" width="1000" height="750" loading="lazy"><figcaption><b>Бурильно-крановая машина БКМ-317 на шасси ГАЗ</b></figcaption></figure>
       <figure><img src="images/tech-4.jpg" alt="Бурильно-крановая машина на шасси КАМАЗ" width="1200" height="800" loading="lazy"><figcaption><b>Бурильно-крановая машина на шасси КАМАЗ</b></figcaption></figure>
       <figure><img src="images/tech-5.jpg" alt="Автокран КС-5576К «Ивановец» на шасси КАМАЗ" width="1200" height="678" loading="lazy"><figcaption><b>Автокран КС-5576К «Ивановец» на шасси КАМАЗ</b></figcaption></figure>
@@ -273,9 +274,11 @@ footer a{color:var(--white)}
 <section id="media">
   <div class="wrap">
     <h2>О нас пишут</h2>
-    <p class="lead">Публикация о работе нашей бригады. Нажмите на картинку, чтобы открыть полностью.</p>
+    <p class="lead">Публикации о компании в прессе. Нажмите на картинку, чтобы открыть полностью.</p>
     <div class="press">
       <figure><a href="media/m1.jpg" target="_blank" rel="noopener"><img src="media/mt1.jpg" alt="Бригада электромонтажников на объекте, газета «Янаульские зори»" loading="lazy"></a><figcaption><b>«Свет над новыми улицами Шудека»</b>Газета «Янаульские зори», 17 апреля 2013 г. Электрификация новых улиц села, бригада электромонтажников СЭМ.</figcaption></figure>
+      <figure><a href="media/m2.jpg" target="_blank" rel="noopener"><img src="media/mt2.jpg" alt="Статья «Надежный штурман в море бушующего рынка»" loading="lazy"></a><figcaption><b>«Надёжный штурман в море бушующего рынка»</b>Публикация о предприятии, его истории и руководителе: водопроводы, газопроводы, электромонтаж.</figcaption></figure>
+      <figure><a href="media/m3.jpg" target="_blank" rel="noopener"><img src="media/mt3.jpg" alt="Статья «Стабильность и ответственность»" loading="lazy"></a><figcaption><b>«Стабильность и ответственность»</b>Публикация о направлениях работы, технике и коллективе компании.</figcaption></figure>
     </div>
   </div>
 </section>
